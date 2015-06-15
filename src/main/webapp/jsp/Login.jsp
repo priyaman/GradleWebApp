@@ -7,6 +7,8 @@
 <title>Login</title>
 </head>
 <body>
+<h1> Continuous Integration Test.</h1>
+
 	<form action="/GradleWebApp/LoginServlet" method="post">  
 		Email:<input type="text" name="email"/><br/><br/>  
 		Password:<input type="password" name="password"/><br/><br/>  
