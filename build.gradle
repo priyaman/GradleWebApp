@@ -3,15 +3,17 @@ apply plugin : "war"
 configurations{
 	provided
 	compile.extendsFrom provided
+	runtime.extendsFrom provided
 }
 sourceSets{
 	main{compileClasspath += configurations.provided}
+	main{runtimeClasspath += configurations.provided}
 }
 repositories{
 		mavenCentral()
 }
 dependencies{
 	provided 'javax:javaee-web-api:6.0'
-	runtime 'javax.servlet:jstl:1.1.2'
+	provided 'javax.servlet:jstl:1.1.2'
 }
 
