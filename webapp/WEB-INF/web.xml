@@ -6,7 +6,7 @@
   </welcome-file-list>
   <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.fedex.priyaman.login.LoginServlet</servlet-class>
+        <servlet-class>main.java.com.fedex.priyaman.login.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>

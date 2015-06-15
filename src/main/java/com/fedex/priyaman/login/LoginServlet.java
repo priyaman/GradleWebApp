@@ -1,4 +1,4 @@
-package com.fedex.priyaman.login;
+package main.java.com.fedex.priyaman.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
