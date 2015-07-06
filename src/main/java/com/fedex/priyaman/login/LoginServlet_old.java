@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fedex.priyaman.validator.LoginValidator;
-
 /**
  * Servlet implementation class LoginServlet
  */
@@ -43,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		writer.write("Email:" + email + "\n");
 		writer.write("pass:" + password + "\n" );
-		/*if(email.contains("@fedex")){
+		if(email.contains("@fedex")){
 			if(password.equals("123")){
 				writer.write("You have succesfully logged in :" + email);
 				response.sendRedirect("http://www.fedex.com");
@@ -52,14 +50,6 @@ public class LoginServlet extends HttpServlet {
 			}
 		}else{
 			writer.write("Who are you ??");
-		}*/
-		
-		boolean isValid = LoginValidator.validate(email,password);
-		if(isValid){
-			StringBuilder sBuild = new StringBuilder();
-			sBuild.append("You have succesfully logged in :" + email + "\n");		
-		}else{
-			writer.write("Incorrect password");
 		}
 		response.setStatus(HttpServletResponse.SC_OK);
 		
